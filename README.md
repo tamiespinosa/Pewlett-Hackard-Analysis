@@ -3,6 +3,7 @@
 
 ## Table of Contents
 - [Overview of Project](#OverviewProject)
+  * [ERD](#ERD)
   * [Purpose](#purpose)
 - [Results](#Results)
   * [Retiring Employees](#retemp)
@@ -12,7 +13,14 @@
 
 ## <a name="OverviewProject"></a>Overview of Project
 
-A fictional company, Pewlett Hackard, needed an analysis performed on the employees that would soon be eligible for retirement. The data provided for the analysis included several csv files containing employee, department and management information [[7]](#7). The project required using postgress SQL, and pgAdmin in order to analyze tables, filter them and join tables in order to capture information from different sources. 
+A fictional company, Pewlett Hackard, needed an analysis performed on the employees that would soon be eligible for retirement. The data provided for the analysis included several csv files containing employee, department and management information [[6]](#6). The project required using postgress SQL, and pgAdmin in order to analyze tables, filter them and join tables in order to capture information from different sources. 
+
+### <a name="ERD"></a>ERD
+
+With the data provided for the analysis we built an Entity Relationship Diagram (ERD) to identify how the data relates from one data set to the next. We gathered information  and determined that the emp_no from Employees data set and the dept_no from the Departments data set are the primary keys for all of our data. All of the other data sets have foreign keys refering to the primary key. 
+
+<p align="center"> <img src="Data/ERD.png" width ="50%" alt="ERD"> </p>
+<p align="center"> Figure 1: Entity Relationship Diagram from Given Data</p> 
 
 ### <a name="purpose"></a>Purpose
 
