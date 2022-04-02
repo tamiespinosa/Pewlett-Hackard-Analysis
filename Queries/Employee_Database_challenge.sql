@@ -43,3 +43,8 @@ WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
         AND (de.to_date = '9999-01-01')
 ORDER BY e.emp_no;
 
+-- Potential Mentees by title
+SELECT COUNT(me.emp_no) AS title_count, me.title
+FROM mentorship_eligibility as me
+GROUP BY me.title
+ORDER BY title_count DESC;
