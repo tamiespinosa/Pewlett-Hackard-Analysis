@@ -73,7 +73,7 @@ In our third query we got a count of the number of employees per title that woul
 ...
 
 
-<p align="center"> <img src="Data/Chart_Count.png" width ="70%" alt="Chart_Count"> </p>
+<p align="center"> <img src="Data/Chart_Count.png" width ="50%" alt="Chart_Count"> </p>
 <p align="center"> Figure 2: Retiring Employees Count per Title</p> 
 
 ### <a name="mentp"></a>Employees Eligible for Mentorship Program
