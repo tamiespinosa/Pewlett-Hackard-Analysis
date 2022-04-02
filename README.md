@@ -78,6 +78,7 @@ In our third query we got a count of the number of employees per title that woul
 
 ### <a name="mentp"></a>Employees Eligible for Mentorship Program
 
+On our fourth query we gathered information on current employees born in 1965 as potential mentees of the soon to be retiring employees [[5]](#5). Only 1,549 employees meet the requirements previously stated. 
 ...
 
        SELECT DISTINCT ON (e.emp_no) 
@@ -96,13 +97,24 @@ In our third query we got a count of the number of employees per title that woul
 
 ...
 
+Our last query focused on getting a count of the employees meeting the mentorship requirements per title to see how the eligible employees compare to the retiring employees by title. Since employees ready to be mentees only make up 2.14% of the total number of retiring employees, in general the count of mentees per title are small percentage compared to retiring employees count per title. Yet, Senior Engineers seem to be a title that percentage wise compromises less of the mentorship eligible employees and more of the retiring employees. 
 
-[[5]](#5)
+...
 
+       -- Potential Mentees by title
+       SELECT COUNT(me.emp_no) AS title_count, me.title
+       FROM mentorship_eligibility as me
+       GROUP BY me.title
+       ORDER BY title_count DESC;
 
+...
+
+<p align="center"> <img src="Data/Mentee_Count.png" width ="50%" alt="Mentee_Count"> </p>
+<p align="center"> Figure 2: Mentorship Eligible Employees Count per Title</p> 
 
 ## <a name="Summary"></a> Summary
 
+Based on our analysis we found that in Pewlett-Hackard 72,458 current employees are of retiring age and only 1,549 employees meet the given requirements to qualify for the mentorship program. Eligible employees only compromise 2.14% of the total number of retiring employees. It would be recommended to expand the age bracket for employees to be considered potential mentees. Pewlett-Hackard has 240,125 current employees, which means that 30.2% of employees are soon to retire. The company will need to do agressive recruiting and training programs, in particular with Senior Staff and Senior Engineering positions.   
 
 ## <a name="Resources"></a>Resources
 
