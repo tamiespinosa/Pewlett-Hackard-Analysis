@@ -23,13 +23,13 @@ As part of this project we needed to respond to a few questions:
 * How many people per job title are retiring?
 * Who is eligible to participate in a mentorship program? 
 
-## <a name="Results"></a>Results
+We answered these questions using SQL queries [[1]](#1).
 
-The data was analyzed using SQL queries [[1]](#1).
+## <a name="Results"></a>Results
 
 ### <a name="retemp"></a>Retiring Employees
 
-<a name="version1"></a> **Version 1** 
+In our first query we filtered the data to only include employees born between 1952 and 1955, with the assumption that those were employes of retiring age. We collected the titles and got 133, 776 results [[2]](#2).  Yet those results had duplicate employee numbers, as many empolyees had held different titles during their tenure in PH. 
 ...
 
         SELECT e.emp_no, e.first_name, e.last_name,
@@ -43,8 +43,7 @@ The data was analyzed using SQL queries [[1]](#1).
 
 ...
 
-
-[[2]](#2)
+In our second query we filtered the data to only current employees, and also made it so that only the latest title for each employee showed up [[3]](#3). Based on the records we got, we can conclude that a total of 72,458 current employees are of retiring age.  
 
 ...
 
@@ -61,8 +60,7 @@ The data was analyzed using SQL queries [[1]](#1).
         
 ...
 
-
-[[3]](#3)
+In our third query we got a count of the number of employees per title that would be retiring [[4]](#4). This data helps clarify where recruting and mentorship needs to focus. In this case we see that approximatey two thirds of the retiring employees are Senior Engineers or Senior Staff. 
 
 ...
 
@@ -74,8 +72,9 @@ The data was analyzed using SQL queries [[1]](#1).
 
 ...
 
-[[4]](#4)
 
+<p align="center"> <img src="Data/Chart_Count.png" width ="100%" alt="Chart_Count"> </p>
+<p align="center"> Figure 2: Retiring Employees Count per Title</p> 
 
 ### <a name="mentp"></a>Employees Eligible for Mentorship Program
 
